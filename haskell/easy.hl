@@ -1,0 +1,4 @@
+; problems 19
+
+arr !! pred (length arr)
+head (reverse arr)
