@@ -5,3 +5,6 @@
 (fn [arr] (first (reverse arr)))
 
 
+; https://www.4clojure.com/problem/20
+
+(fn [arr] (second (reverse arr)))
