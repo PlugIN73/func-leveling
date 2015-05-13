@@ -2,3 +2,7 @@
 
 arr !! pred (length arr)
 head (reverse arr)
+
+; problems 20
+arr !! pred (pred (length arr))
+last (init a)
