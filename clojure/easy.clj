@@ -8,3 +8,6 @@
 ; https://www.4clojure.com/problem/20
 
 (fn [arr] (second (reverse arr)))
+
+; https://www.4clojure.com/problem/21
+(fn [arr n] (last (take (inc n) arr)))
