@@ -1,8 +1,23 @@
-; problems 19
+-- problems 19
 
 arr !! pred (length arr)
 head (reverse arr)
 
-; problems 20
+-- problems 20
 arr !! pred (pred (length arr))
 last (init a)
+
+-- [1,2,3,4,5] ⇒ 2 + 4 ⇒ 6
+sumEven :: [Integer] -> Integer
+sumEven list = accumSum 0 list
+
+accumSum :: Integer -> [Integer] -> Integer
+accumSum acc list = if list == []
+                       then acc
+                       else let h = head list
+                                t = tail list
+                            in if even h
+                                  then accumSum (acc + h) t
+                                  else accumSum acc t
+
+main = print (sumEven [1,2, 2, 3,4,5])
