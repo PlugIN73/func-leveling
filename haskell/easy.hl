@@ -21,3 +21,12 @@ accumSum acc list = if list == []
                                   else accumSum acc t
 
 main = print (sumEven [1,2, 2, 3,4,5])
+
+sumEven :: [Integer] -> Integer
+sumEven list = accumSum 0 list
+    where
+        accumSum n [] = n
+        accumSum n (x:xs) =
+            if even x
+                then accumSum (n + x) xs
+                else accumSum n xs
